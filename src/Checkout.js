@@ -15,7 +15,9 @@ function Checkout() {
       <div className="checkout__left">
         <img className="checkout__ad" src={ad} alt="Gifts under $100" />
         <div className="checkout__title">
-          <h2>Your shopping basket</h2>
+          <h2>
+            {state.user ? state.user.email + "'s" : "Your"} shopping basket
+          </h2>
         </div>
         <div className="checkout__items">
           {state.basket.map((item) => (
