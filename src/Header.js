@@ -1,9 +1,10 @@
 import React from "react";
-import "./Header.css";
 import { Link } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
 
+import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+
+import "./Header.css";
 
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketicon from "@material-ui/icons/ShoppingBasket";

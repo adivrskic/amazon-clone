@@ -1,7 +1,8 @@
 import React from "react";
-import Product from "./Product";
 
 import "./Home.css";
+
+import Product from "./Product";
 
 import banner from "./images/banner.jpg";
 import theLeanStartup from "./images/products/the-lean-startup.jpg";

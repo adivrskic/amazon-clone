@@ -1,11 +1,12 @@
 import React from "react";
-import "./Checkout.css";
 import { useStateValue } from "./StateProvider";
 
+import "./Checkout.css";
+
 import Subtotal from "./Subtotal";
+import CheckoutProduct from "./CheckoutProduct";
 
 import ad from "./images/ad.jpg";
-import CheckoutProduct from "./CheckoutProduct";
 
 function Checkout() {
   const [state, dispatch] = useStateValue();
