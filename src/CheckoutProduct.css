@@ -1,6 +1,8 @@
 .checkout-product {
   display: flex;
   margin: 20px 0;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .checkout-product__info {
@@ -28,4 +30,10 @@
 .checkout-product__title {
   font-size: 17px;
   font-weight: 800;
+}
+
+@media (hover: hover) {
+  .checkout-product:hover {
+    box-shadow: 0 0 7px rgba(53, 53, 93, 0.28);
+  }
 }
