@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { useStateValue } from "./StateProvider";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
@@ -9,9 +9,12 @@ import "./Payment.css";
 import CheckoutProduct from "./CheckoutProduct";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
+import axios from "./axios";
+import { db } from "./firebase";
 
 function Payment() {
   const [state, dispatch] = useStateValue();
+  const history = useHistory();
 
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
@@ -48,9 +51,29 @@ function Payment() {
         },
       })
       .then(({ paymentIntent }) => {
+        console.log(
+          "basket: ",
+          state.basket,
+          paymentIntent.amount,
+          paymentIntent.created
+        );
+        db.collection("users")
+          .doc(state.user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: state.basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
 
         history.replace("/orders");
       });
