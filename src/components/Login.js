@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-import { auth } from "./firebase";
-import logoBlack from "./images/logo-black.jpg";
+import { auth } from "../firebase";
+import logoBlack from "../images/logo-black.jpg";
 
-import "./Login.css";
+import "../styles/Login.css";
 
 function Login() {
   const history = useHistory();

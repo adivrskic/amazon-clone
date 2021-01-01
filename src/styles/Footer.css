@@ -9,8 +9,8 @@
   text-align: center;
 }
 
-a,
-p {
+.footer a,
+.footer p {
   color: #fff;
   font-size: 13px;
 }

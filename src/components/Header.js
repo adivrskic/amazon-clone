@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useStateValue } from "./StateProvider";
-import { auth } from "./firebase";
+import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
 
-import "./Header.css";
+import "../styles/Header.css";
 
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketicon from "@material-ui/icons/ShoppingBasket";
 
-import logo from "./images/logo.png";
+import logo from "../images/logo.png";
 
 function Header() {
   const [state, dispatch] = useStateValue();

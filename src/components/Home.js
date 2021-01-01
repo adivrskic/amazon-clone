@@ -1,16 +1,16 @@
 import React from "react";
 
-import "./Home.css";
+import "../styles/Home.css";
 
 import Product from "./Product";
 
-import banner from "./images/banner.jpg";
-import theLeanStartup from "./images/products/the-lean-startup.jpg";
-import panOrganizer from "./images/products/pan-organizer.jpg";
-import batteryCharger from "./images/products/battery-charger.jpg";
-import dbz from "./images/products/dbz.jpg";
-import memoryCard from "./images/products/memory-card.jpg";
-import tv from "./images/products/tv.jpg";
+import banner from "../images/banner.jpg";
+import theLeanStartup from "../images/products/the-lean-startup.jpg";
+import panOrganizer from "../images/products/pan-organizer.jpg";
+import batteryCharger from "../images/products/battery-charger.jpg";
+import dbz from "../images/products/dbz.jpg";
+import memoryCard from "../images/products/memory-card.jpg";
+import tv from "../images/products/tv.jpg";
 
 function Home() {
   return (
